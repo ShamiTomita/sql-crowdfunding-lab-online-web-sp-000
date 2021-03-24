@@ -31,8 +31,8 @@ def selects_the_titles_and_amount_over_goal_of_all_projects_that_have_met_their_
    JOIN pledges 
    ON projects.id = pledges.project_id
    GROUP BY projects.title
-   ORDER BY projects.title ASC
-   HAVING SUM(pledges.amount) > projects.funding_goal;"
+   HAVING SUM(pledges.amount) > projects.funding_goal
+   ORDER BY projects.title ASC;"
 end
 
 def selects_user_names_and_amounts_of_all_pledges_grouped_by_name_then_orders_them_by_the_summed_amount
